@@ -1,0 +1,53 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+
+.container {
+  min-width: 300px;
+  min-height: 300px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 20px;
+  overflow-y: hidden;
+  transform: translate(-50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  background-color: #030303;
+  border-radius: 20px;
+  animation-name: animation-box;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+}
+@keyframes animation-box {
+  0% {
+    transform: translateY(100%) translateX(-100%);
+    background-color: blue;
+  }
+  25% {
+    transform: translateY(100%) translateX(100%);
+    background-color: green;
+  }
+  50% {
+    transform: translateY(-100%) translateX(100%);
+    background-color: yellow;
+  }
+  75% {
+    transform: translateY(-100%) translateX(-100%);
+    background-color: red;
+  }
+  100% {
+    transform: translateY(100%) translateX(-100%);
+    background-color: blue;
+  }
+}
